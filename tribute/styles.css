@@ -45,3 +45,18 @@ img {
 fieldset.motto {
   border: solid 1px black;
 }
+
+#image {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+}
+
+ul {
+  list-style: none;
+}
+
+span.underline {
+  text-decoration: underline;
+}
