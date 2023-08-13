@@ -1,20 +1,47 @@
 body {
   display: flex;
   text-align: center;
+  line-height: 1.5;
+  margin: 0;
+  font-family: "Gill-sans", sans-serif;
 }
 
 main {
-  background: azure;
   color: black;
   padding: 20px;
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  
 }
 
 #image {
   max-width: 100%;
-  height: 100%;
+  height: auto;
   text-align: center;
 }
 
 legend {
+  border: solid 2px black;
+  border-style: solid;
+}
+
+img {
+  display: block;
+}
+
+#img-div {
+  background: azure;
+  color: black;
+}
+
+#motto {
+  font-style: italic;
+  font-weight: 100
+}
+
+fieldset.motto {
   border: solid 1px black;
 }
