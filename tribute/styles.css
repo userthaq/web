@@ -7,6 +7,7 @@ main {
   background: azure;
   color: black;
   padding: 20px;
+  margin: 10px 25px;
 }
 
 #image {
@@ -17,4 +18,24 @@ main {
 
 legend {
   border: solid 1px black;
+}
+
+span {
+  font-weight: bold;
+}
+
+#tribute-info {
+  font-style: Arial, sans-serif;
+  padding: 10px;
+  margin: 10px 0px;
+  font-style: "Lucida Console", "Courier New", monospace;
+}
+
+#img-info {
+  font-style: italic;
+  font-weight: 100;
+}
+
+h1 {
+  font-style: monospace;
 }
