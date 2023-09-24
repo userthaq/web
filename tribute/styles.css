@@ -1,6 +1,10 @@
 body {
   display: flex;
   text-align: center;
+  font-weight: 400;
+  width: 100%;
+  height: 100vh;
+  line-height: 1.4;
 }
 
 main {
@@ -18,6 +22,7 @@ main {
 
 legend {
   border: solid 1px black;
+  margin: 40px;
 }
 
 span {
@@ -38,4 +43,21 @@ span {
 
 h1 {
   font-style: monospace;
+  font-weight: 400;
+}
+
+label {
+  display: block;
+  margin: 0.5rem;
+}
+
+#career-info {
+  border: solid 1px black;
+}
+
+.img-div {
+  text-align: center;
+  top: 0;
+  left: 0;
+  padding: 0px 20px;
 }
