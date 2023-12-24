@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: "Lato", sans-serif;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  padding-inline-start: 40px;
+}
+
+#wrap {
+  position: relative;
+}
