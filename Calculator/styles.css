@@ -1,0 +1,10 @@
+body {
+  background: white;
+  font-weight: 500;
+}
+
+.button {
+  margin-top: 0;
+  padding: 10px;
+  grid-auto-rows: auto;
+}
