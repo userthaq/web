@@ -3,20 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="watch.css" />
     <title>Stopwatch</title>
   </head>
   <body>
-    <h1>Stop watch</h1>
-    <div class="wrapper">
-      <p>
-        <span id="minutes">00</span>:<span id="seconds">00</span>:<span
-          id="tens"
-          >00</span
-        >
-      </p>
-      <button id="start-button">Start</button>
-      <button id="stop-button">Stop</button>
-      <button id="reset-button">Reset</button>
+    <div class="container">
+      <div class="time">
+        <span class="digit" id="hr">00</span>
+        <span class="text">Hr</span>
+        <span class="digit" id="min">00</span>
+        <span class="text">Min</span>
+        <span class="digit" id="sec">00</span>
+        <span class="text">Sec</span>
+        <span class="digit" id="count">00</span>
+        <div id="buttons">
+          <div type="button" class="start">Start</div>
+          <div type="button" class="stop">Stop</div>
+          <div type="button" class="reset">Reset</div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

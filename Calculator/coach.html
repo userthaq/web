@@ -18,39 +18,40 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="coach.js"></script>
     <div class="container">
       <div class="display">
-        <div class="alert alert-info" role="alert">0</div>
+        <div id="calc_display" class="alert alert-info" role="alert">0</div>
       </div>
       <div class="buttons"></div>
         <div class="row">
-            <div class="col"><button type="button" class="btn btn-dark buttons clear" id="button-C"><span>C</span></button></div>
+            <div class="col"><button type="button" class="btn btn-dark buttons clear" id="button-C" onClick="clearClicked()"><span>C</span></button></div>
             <div class="col"><button type="button" class="btn btn-dark buttons" id="button-+/-">+/-</button></div>
             <div class="col"><button type="button" class="btn btn-dark buttons" id="button-%">%</button></div>
-            <div class="col"><button type="button" class="btn btn-warning buttons operator" id="button-÷">÷</button></div>
+            <div class="col"><button type="button" class="btn btn-warning buttons operator" id="button-÷" onClick="operatorClicked('÷')">÷</button></div>
         </div>
           <div class="row">
-            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-1">1</button></div>
-            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-2">2</button></div>
-            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-3">3</button></div>
-            <div class="col"><button type="button" class="btn btn-warning buttons operator" id="button-x">x</button></div>
+            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-1" onClick="numberClicked(1)">1</button></div>
+            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-2" onClick="numberClicked(2)">2</button></div>
+            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-3" onClick="numberClicked(3)">3</button></div>
+            <div class="col"><button type="button" class="btn btn-warning buttons operator" id="button-x" onClick="operatorClicked('x')">x</button></div>
           </div>
           <div class="row">
-            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-4">4</button></div>
-            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-5">5</button></div>
-            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-6">6</button></div>
-            <div class="col"><button type="button" class="btn btn-warning buttons operator" id="button--">-</button></div>
+            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-4" onClick="numberClicked(4)">4</button></div>
+            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-5" onClick="numberClicked(5)">5</button></div>
+            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-6" onClick="numberClicked(6)">6</button></div>
+            <div class="col"><button type="button" class="btn btn-warning buttons operator" id="button--" onClick="operatorClicked('-')">-</button></div>
           </div>
           <div class="row">
-            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-7">7</button></div>
-            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-8">8</button></div>
-            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-9">9</button></div>
-            <div class="col"><button type="button" class="btn btn-warning buttons operator" id="button-+">+</button></div>
+            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-7" onClick="numberClicked(7)">7</button></div>
+            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-8" onClick="numberClicked(8)">8</button></div>
+            <div class="col"><button type="button" class="btn btn-dark buttons keys" id="button-9" onClick="numberClicked(9)">9</button></div>
+            <div class="col"><button type="button" class="btn btn-warning buttons operator" id="button-+" onClick="operatorClicked('+')">+</button></div>
           </div>
           <div class="row">
-            <div class="col-6"><button type="button" class="btn btn-dark buttons keys" id="button-0">0</button></div>
+            <div class="col-6"><button type="button" class="btn btn-dark buttons keys" id="button-0" onClick="numberClicked(0)">0</button></div>
             <div class="col-3"><button type="button" class="btn btn-warning buttons" id="button-.">.</button></div>
-            <div class="col-3"><button type="button" class="btn btn-warning buttons equal" id="button-=">=</button></div>
+            <div class="col-3"><button type="button" class="btn btn-warning buttons equal" id="button-=" onClick="resultClicked()">=</button></div>
           </div>
       </div>
     </div>
