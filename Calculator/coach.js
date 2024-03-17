@@ -3,9 +3,14 @@ var arrOperator = [];
 var calcHistory = [];
 var enteredNumber = "";
 var firstValue = 0;
+var isEqualClicked = false;
 
 function numberClicked(num) {
   var display = document.querySelector("#calc_display");
+  if (isEqualClicked) {
+    clearClicked();
+    isEqualClicked = false;
+  }
   if (display.innerHTML == "0") {
     enteredNumber = String(num);
     display.innerHTML = num;
@@ -24,6 +29,13 @@ function clearClicked() {
 
 function operatorClicked(char) {
   var display = document.querySelector("#calc_display");
+  var latestEqual = display.innerHTML;
+  if (isEqualClicked) {
+    arrNumber = [];
+    arrOperator = [];
+    enteredNumber = latestEqual;
+    isEqualClicked = false;
+  }
   if (display.innerHTML == "0") {
   } else {
     arrNumber.push(enteredNumber);
@@ -43,6 +55,8 @@ function resultClicked() {
   }
   display.innerHTML = total;
   calcHistory.push(total);
+  isEqualClicked = true;
+  history();
 }
 
 function operation(num1, num2, operator) {
