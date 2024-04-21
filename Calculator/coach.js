@@ -1,9 +1,10 @@
 var arrNumber = [];
 var arrOperator = [];
-var calcHistory = [];
+var calcHistory = "";
 var enteredNumber = "";
 var firstValue = 0;
 var isEqualClicked = false;
+var arrHistory = [];
 
 function numberClicked(num) {
   var display = document.querySelector("#calc_display");
@@ -54,9 +55,10 @@ function resultClicked() {
     total = operation(total, arrNumber[i + 1], arrOperator[i]);
   }
   display.innerHTML = total;
-  calcHistory.push(total);
+  //calcHistory.push(total);
+  calcHistory = total;
   isEqualClicked = true;
-  history();
+  history(total);
 }
 
 function operation(num1, num2, operator) {
@@ -71,8 +73,20 @@ function operation(num1, num2, operator) {
   }
 }
 
+function history(total) {
+  var display = document.querySelector("#historyDisplay");
+  var html = "<p>" + total + "</p>";
+  display.innerHTML = html + display.innerHTML;
+}
+
+/*
 function history() {
   for (let i = 0; i < calcHistory.length; i++) {
-    historyDisplay.innerHTML = calcHistory[i];
+//    historyDisplay.innerHTML = calcHistory[i];    
+
+display.innerHTML += " " + "+" + calcHistory;
+
+
   }
 }
+*/
