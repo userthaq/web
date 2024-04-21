@@ -4,10 +4,11 @@ var calcHistory = "";
 var enteredNumber = "";
 var firstValue = 0;
 var isEqualClicked = false;
-var arrHistory = [];
+var isOperatorClicked = true;
 
 function numberClicked(num) {
   var display = document.querySelector("#calc_display");
+  isOperatorClicked = false;
   if (isEqualClicked) {
     clearClicked();
     isEqualClicked = false;
@@ -39,11 +40,21 @@ function operatorClicked(char) {
   }
   if (display.innerHTML == "0") {
   } else {
-    arrNumber.push(enteredNumber);
-    arrOperator.push(char);
-    firstValue = Number(enteredNumber);
-    enteredNumber = "";
-    display.innerHTML += char;
+    if (!isOperatorClicked) {
+      arrNumber.push(enteredNumber);
+      arrOperator.push(char);
+      firstValue = Number(enteredNumber);
+      enteredNumber = "";
+      display.innerHTML += char;
+      isOperatorClicked = true;
+    } else {
+      arrOperator.pop();
+      arrOperator.push(char);
+      firstValue = Number(enteredNumber);
+      enteredNumber = "";
+      display.innerHTML =
+        display.innerHTML.slice(0, display.innerHTML.length - 1) + char;
+    }
   }
 }
 
